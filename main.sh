@@ -237,7 +237,7 @@ print_success "Xray C0re"
     # > BadVPN
     #source <(curl -sL ${REPO}badvpn/setup.sh)
     #print_success "OpenVPN"
-}
+#}
 
 ### Pasang SlowDNS
 function install_slowdns(){
