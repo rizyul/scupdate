@@ -1,5 +1,5 @@
 • HUBUNGI:
-- Telegram: [Klik Disini](https://t.me/RVPNSTORES)
+- Telegram: [Klik Disini](https://t.me/RIZYUL04)
 
 ### PERHATIAN
 
@@ -7,10 +7,10 @@
 - Jika mendapatkan error pada servis dalam jangka panjang, bisa restart servis yang dead.
 
 ### INSTALL SCRIPT 1
-<pre><code>sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/snakeynotme/scupdate/main/main.sh && chmod +x main.sh && sed -i -e 's/\r$//' main.sh && screen -S install ./main.sh</code></pre>
+<pre><code>sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/rizyul/scupdate/main/main.sh && chmod +x main.sh && sed -i -e 's/\r$//' main.sh && screen -S install ./main.sh</code></pre>
 
 ### PERINTAH UPDATE 
-<pre><code>wget https://raw.githubusercontent.com/snakeynotme/scupdate/main/update.sh && chmod +x update.sh && ./update.sh</code></pre>
+<pre><code>wget https://raw.githubusercontent.com/rizyul/scupdate/main/update.sh && chmod +x update.sh && ./update.sh</code></pre>
 
 ### TESTED ON OS 
 - UBUNTU 20.04.05
