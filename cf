@@ -6,13 +6,13 @@ ns_domain_cloudflare1() {
 apt install jq curl -y
 clear
 
-read -rp "Sub Domain (Contoh: udin123): " -e sub
+read -rp "Sub Domain (Contoh: sayang69): " -e sub
 DOMAIN=devstun.my.id
 echo $sub > /root/cfku
 SUB_DOMAIN=${sub}.devstun.my.id
 CF_ID=cocresult1@gmail.com
 CF_KEY=8b69a018ff18da71e5d8297e720e14cb38286
-echo "aingdev.me" > /root/domain
+echo "devstun.my.id" > /root/domain
 echo $SUB_DOMAIN > /root/domain
 
 set -euo pipefail
