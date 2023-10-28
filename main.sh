@@ -501,7 +501,7 @@ function install_all() {
     # add_domain
     pasang_ssl 
     install_xray >> /root/install.log
-    install_ovpn >> /root/install.log
+    #install_ovpn >> /root/install.log
     install_slowdns >> /root/install.log
     download_config >> /root/install.log
     enable_services >> /root/install.log
