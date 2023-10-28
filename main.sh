@@ -230,14 +230,13 @@ print_success "Xray C0re"
 }
 
 ### Pasang OpenVPN
-function install_ovpn(){
-    print_install "Memasang modul Openvpn"
-    source <(curl -sL ${REPO}openvpn/openvpn)
-    wget -O /etc/pam.d/common-password "${REPO}openvpn/common-password" >/dev/null 2>&1
-    chmod +x /etc/pam.d/common-password
+#  print_install "Memasang modul Openvpn"
+    #source <(curl -sL ${REPO}openvpn/openvpn)
+    #wget -O /etc/pam.d/common-password "${REPO}openvpn/common-password" >/dev/null 2>&1
+    #chmod +x /etc/pam.d/common-password
     # > BadVPN
-    source <(curl -sL ${REPO}badvpn/setup.sh)
-    print_success "OpenVPN"
+    #source <(curl -sL ${REPO}badvpn/setup.sh)
+    #print_success "OpenVPN"
 }
 
 ### Pasang SlowDNS
@@ -434,7 +433,7 @@ function enable_services(){
     systemctl enable --now xray
     systemctl enable --now rc-local
     systemctl enable --now dropbear
-    systemctl enable --now openvpn
+    #systemctl enable --now openvpn
     systemctl enable --now cron
     systemctl enable --now haproxy
     systemctl enable --now netfilter-persistent
@@ -537,7 +536,7 @@ function finish(){
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ🐳","url":"https://t.me/rizyul04"},{"text":"GRUP🐬","url":"https://t.me/rizyulvpn"}]]}'
   
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
-    cp /etc/openvpn/*.ovpn /var/www/html/
+   # cp /etc/openvpn/*.ovpn /var/www/html/
     # > sed -i "s/xxx/${domain}/g" /var/www/html/index.html
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${MYIP}/g" /etc/squid/squid.conf
@@ -555,10 +554,9 @@ function finish(){
     echo "    │   - Dropbear Websocket      : 443, 109              │"
     echo "    │   - SSH Websocket SSL       : 443                   │"
     echo "    │   - SSH Websocket           : 80                    │"
-    echo "    │   - OpenVPN SSL             : 1194                  │"
-    echo "    │   - OpenVPN Websocket SSL   : 443                   │"
-    echo "    │   - OpenVPN TCP             : 1194                  │"
-    echo "    │   - OpenVPN UDP             : 2200                  │"
+    #echo "    │   - OpenVPN Websocket SSL   : 443                   │"
+    #echo "    │   - OpenVPN TCP             : 1194                  │"
+    #echo "    │   - OpenVPN UDP             : 2200                  │"
     echo "    │   - Nginx Webserver         : 443, 80, 81           │"
     echo "    │   - Haproxy Loadbalancer    : 443, 80               │"
     echo "    │   - DNS Server              : 443, 53               │"
