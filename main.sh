@@ -374,11 +374,12 @@ function download_config(){
     wget -q -O /etc/banner "${REPO}config/banner" >/dev/null 2>&1
     
     # > Add menu <3
-    wget -O /tmp/menu-master.zip "${REPO}config/menu.zip" >/dev/null 2>&1
-    mkdir /tmp/menu
-    7z e  /tmp/menu-master.zip -o/tmp/menu/ >/dev/null 2>&1
-    chmod +x /tmp/menu/*
-    mv /tmp/menu/* /usr/sbin/
+    wget https://raw.githubusercontent.com/rizyul/scupdate/main/config/menu.zip
+    unzip menu.zip
+    chmod +x uwu/*
+    mv uwu/* /usr/local/sbin
+    rm -rf uwu
+    rm -rf menu.zip
 
 
     cat >/root/.profile <<EOF
