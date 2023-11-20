@@ -259,7 +259,7 @@ function install_xray(){
     xray_latest="$(curl -s https://api.github.com/repos/dharak36/Xray-core/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
     xraycore_link="https://github.com/dharak36/Xray-core/releases/download/v$xray_latest/xray.linux.64bit"
     curl -sL "$xraycore_link" -o xray
-     > unzip -q xray.zip && rm -rf xray.zip
+     #> unzip -q xray.zip && rm -rf xray.zip
     mv xray /usr/sbin/xray
     print_success "Xray Core"
     
@@ -376,9 +376,9 @@ function download_config(){
     # > Add menu <3
     wget https://raw.githubusercontent.com/rizyul/scupdate/main/config/menu.zip
     unzip menu.zip
-    chmod +x uwu/*
+    chmod +x menu/*
     mv uwu/* /usr/local/sbin
-    rm -rf uwu
+    rm -rf menu
     rm -rf menu.zip
 
 
